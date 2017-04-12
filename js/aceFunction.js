@@ -28,6 +28,7 @@ var currentFuncContent = '';
 
 /*Добавляем скрипт со спеками и запускаем mocha*/
 function startSpec() {
+    cleanMocha();
     saveCode(pathToSpecs,currentDescrContent);
     eval(currentFuncContent);
     eval(currentDescrContent);
@@ -79,6 +80,22 @@ function isScriptExist(pathToScript) {
 var value = true;
 var scripts = '';
 
+/*Очищаем окно результатов*/
+var well = document.getElementById('well');
+function cleanMocha() {
+    var mochaDiv = document.getElementById('mocha');
+    well.removeChild(mochaDiv);
+    mochaDiv = document.createElement('div')
+    mochaDiv.id = 'mocha'
+    well.appendChild(mochaDiv);
+}
+function cleanMocha2() {
+    var mochaReport = document.getElementById('mocha-report');
+    var mochaLiSuite = document.getElementsByClassName('suite');
+    for (var i = 0; i < mochaLiSuite; i++){
+        mochaReport.removeChild(mochaLiSuite[i]);
+    }
+}
 
 aceFunc();
 aceDescr();
