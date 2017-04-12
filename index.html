@@ -89,11 +89,18 @@
 <!--Уникальный контент-->
 <div class="container main-section">
     <div class="row">
-        <div class="col-md-12">
-            <a href="#" class="btn btn-primary btn-sm disabled pull-right editor-label" style="background-color: #61a663; border-color: #61a663;" role="button">JS</a>
+        <div class="col-md-6">
+            <a href="#" class="btn btn-primary btn-sm disabled pull-right editor-label" style="background-color: #61a663; border-color: #61a663;" role="button">Test</a>
             <div id="editor" class="img-rounded">
 
             </div>
+        </div>
+        <div class="col-md-6">
+            <a href="#" class="btn btn-primary btn-sm disabled pull-right editor-label" style="background-color: #61a663; border-color: #61a663;" role="button">Function</a>
+            <div id="editorFunc" class="img-rounded">
+
+            </div>
+            <button type="button" class="btn btn-primary btn-md pull-right float-button" onclick="saveCode(pathToCode,currentFuncContent)">Сохранить</button>
         </div>
         <div class="col-md-12">
             <div class="well well-position" id="well">
@@ -216,7 +223,6 @@
 <script src="js/bootstrap.js"></script>
 <!--Ace js editor-->
 <script src="https://cdn.jsdelivr.net/g/ace@1.2.3(min/ace.js+min/ext-emmet.js+min/mode-html.js)" charset="UTF-8" type="text/javascript"></script>
-<script src="js/ace.js" type="text/javascript"></script>
-<script src="js/specs.js" type="text/javascript"></script>
+<script src="js/aceFunction.js" type="text/javascript"></script>
 </body>
 </html>
